@@ -32,6 +32,4 @@ def send_mail(title, body, html=''):
 
 text = 'Это просто текст пистьма.'
 
-if __name__ == '__main__':
-    send_mail(title='Everyday letter', body=text)
-    app.run(debug=False)
+send_mail(title='Everyday letter', body=text)
