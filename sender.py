@@ -2,9 +2,7 @@ from flask import Flask
 from flask_mail import Mail, Message
 
 # адреса почты, кому будет приходить уведомление
-RECIPIENTS = [
-    'td@21smart.ru',
-    'tsvet005@yandex.ru']
+RECIPIENTS = ['tsvet005@yandex.ru']
 
 app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.yandex.ru'
@@ -30,6 +28,6 @@ def send_mail(title, body, html=''):
     print(f'Письма отправлены: {RECIPIENTS}')
     return
 
-text = 'Это просто текст пистьма.'
+text = 'Это просто текст письма.'
 
 send_mail(title='Everyday letter', body=text)
