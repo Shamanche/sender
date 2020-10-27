@@ -13,11 +13,6 @@ app.config['MAIL_USERNAME'] = 'informersmart@yandex.ru'
 app.config['MAIL_DEFAULT_SENDER'] = 'informersmart@yandex.ru'
 app.config['MAIL_PASSWORD'] = 'Smart620514'
 
-@app.route('/', methods=['get'])
-def index():
-    message = "Hi! It is Everyday sender."
-    return message
-
 def send_mail(title, body, html=''):
     with app.app_context():
         mail = Mail(app)
