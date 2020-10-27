@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_mail import Mail, Message
+import datetime
 
 # адреса почты, кому будет приходить уведомление
 RECIPIENTS = ['tsvet005@yandex.ru']
@@ -23,7 +24,9 @@ def send_mail(title, body, html=''):
     print(f'Письма отправлены: {RECIPIENTS}')
     return
 
-text = 'Это просто текст письма.'
+current_date = datetime.datetime.now()
+text = 'Это просто текст письма. Отправлено: {} в {}'.format(
+    current_date.date(), current_date.time())
 
 send_mail(title='Everyday letter', body=text)
 
