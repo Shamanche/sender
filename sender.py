@@ -28,5 +28,3 @@ text = 'Это просто текст письма.'
 send_mail(title='Everyday letter', body=text)
 
 print('Завершение работы')
-
-quit()
