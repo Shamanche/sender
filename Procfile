@@ -1,1 +1,0 @@
-mail: python sender.py
