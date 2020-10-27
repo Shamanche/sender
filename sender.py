@@ -26,3 +26,7 @@ def send_mail(title, body, html=''):
 text = 'Это просто текст письма.'
 
 send_mail(title='Everyday letter', body=text)
+
+print('Завершение работы')
+
+quit()
