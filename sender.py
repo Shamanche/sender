@@ -26,8 +26,8 @@ def send_mail(title, body, html=''):
 
 current_date = datetime.datetime.now()
 text = 'Это просто текст письма. Отправлено: {} в {}'.format(
-    current_date.date(), current_date.time())
+    current_date.date(), current_date.replace(hour=current_date.hour+3).time())
 
-send_mail(title='Everyday letter', body=text)
+#send_mail(title='Everyday letter', body=text)
 
 print('Завершение работы')
