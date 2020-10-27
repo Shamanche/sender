@@ -1,1 +1,1 @@
-web: gunicorn sender:app
+mail: python sender.py
