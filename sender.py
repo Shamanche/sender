@@ -25,9 +25,10 @@ def send_mail(title, body, html=''):
     return
 
 current_date = datetime.datetime.now()
-text = 'Это просто текст письма. Отправлено: {} в {}'.format(
-    current_date.date(), current_date.replace(hour=current_date.hour+3).time())
-
-send_mail(title='Everyday letter', body=text)
+print('Текущий день недели: ',current_date.isoweekday())
+if current_date.isoweekday() == 4 :
+    text = 'Это просто текст письма. Отправлено: {} в {}'.format(
+        current_date.date(), current_date.time())
+    send_mail(title='Test letter', body=text)
 
 print('Завершение работы')
